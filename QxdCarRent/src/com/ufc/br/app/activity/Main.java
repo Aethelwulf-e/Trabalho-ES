@@ -15,9 +15,12 @@ import java.awt.Font;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.event.ActionEvent;
 
 public class Main {
+	private static String VERSION = "v_1.1";
 
 	private JFrame frameMainScreen;
 
@@ -93,6 +96,14 @@ public class Main {
 		labelMainScreenSignUp.setBounds(189, 411, 100, 24);
 		panelMainScreenLogo.add(labelMainScreenSignUp);
 		labelMainScreenSignUp.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		
+		labelMainScreenSignUp.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				SignUp s = new SignUp();
+				s.setVisible(true);
+			}
+		});
 	}
 	
 	private void loadRightPanel() {
@@ -111,7 +122,7 @@ public class Main {
 		buttonMainScreenUser.setIcon(new ImageIcon(Main.class.getResource("/com/ufc/br/app/assets/icons/user.png")));
 		buttonMainScreenUser.setBackground(Color.WHITE);
 		buttonMainScreenUser.setVerticalTextPosition(SwingConstants.BOTTOM);
-	    buttonMainScreenUser.setHorizontalTextPosition(SwingConstants.CENTER);
+		buttonMainScreenUser.setHorizontalTextPosition(SwingConstants.CENTER);
 		buttonMainScreenUser.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -123,8 +134,13 @@ public class Main {
 		buttonMainScreenAdmin.setIcon(new ImageIcon(Main.class.getResource("/com/ufc/br/app/assets/icons/admin.png")));
 		buttonMainScreenAdmin.setBackground(Color.WHITE);
 		buttonMainScreenAdmin.setVerticalTextPosition(SwingConstants.BOTTOM);
-	    buttonMainScreenAdmin.setHorizontalTextPosition(SwingConstants.CENTER);
+		buttonMainScreenAdmin.setHorizontalTextPosition(SwingConstants.CENTER);
 		buttonMainScreenAdmin.setBounds(253, 190, 150, 150);
 		panelMainScreenSignIn.add(buttonMainScreenAdmin);
+		
+		JLabel labelMainScreenVersion = new JLabel(VERSION);
+		labelMainScreenVersion.setForeground(Color.BLUE);
+		labelMainScreenVersion.setBounds(396, 434, 46, 14);
+		panelMainScreenSignIn.add(labelMainScreenVersion);
 	}
 }
