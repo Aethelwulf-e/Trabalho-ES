@@ -1,4 +1,4 @@
-package com.ufc.br.app.activity;
+package com.ufc.br.QxdCarRent.boundary.view;
 
 import java.awt.EventQueue;
 
@@ -74,7 +74,7 @@ public class Main {
 		panelMainScreenLogo.setLayout(null);
 		
 		JLabel labelMainScreenIcon = new JLabel("");
-		labelMainScreenIcon.setIcon(new ImageIcon(Main.class.getResource("/com/ufc/br/app/assets/icons/logo.png")));
+		labelMainScreenIcon.setIcon(new ImageIcon(Main.class.getResource("/com/ufc/br/QxdCarRent/boundary/assets/icons/logo.png")));
 		labelMainScreenIcon.setBounds(70, 64, 194, 174);
 		panelMainScreenLogo.add(labelMainScreenIcon);
 		
@@ -119,7 +119,7 @@ public class Main {
 		panelMainScreenSignIn.add(labelMainScreenLogin);
 		
 		JButton buttonMainScreenUser = new JButton("Entrar como cliente");
-		buttonMainScreenUser.setIcon(new ImageIcon(Main.class.getResource("/com/ufc/br/app/assets/icons/user.png")));
+		buttonMainScreenUser.setIcon(new ImageIcon(Main.class.getResource("/com/ufc/br/QxdCarRent/boundary/assets/icons/user.png")));
 		buttonMainScreenUser.setBackground(Color.WHITE);
 		buttonMainScreenUser.setVerticalTextPosition(SwingConstants.BOTTOM);
 		buttonMainScreenUser.setHorizontalTextPosition(SwingConstants.CENTER);
@@ -131,7 +131,7 @@ public class Main {
 		panelMainScreenSignIn.add(buttonMainScreenUser);
 		
 		JButton buttonMainScreenAdmin = new JButton("Entrar como admin");
-		buttonMainScreenAdmin.setIcon(new ImageIcon(Main.class.getResource("/com/ufc/br/app/assets/icons/admin.png")));
+		buttonMainScreenAdmin.setIcon(new ImageIcon(Main.class.getResource("/com/ufc/br/QxdCarRent/boundary/assets/icons/admin.png")));
 		buttonMainScreenAdmin.setBackground(Color.WHITE);
 		buttonMainScreenAdmin.setVerticalTextPosition(SwingConstants.BOTTOM);
 		buttonMainScreenAdmin.setHorizontalTextPosition(SwingConstants.CENTER);

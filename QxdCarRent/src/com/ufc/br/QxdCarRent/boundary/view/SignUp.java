@@ -1,4 +1,4 @@
-package com.ufc.br.app.activity;
+package com.ufc.br.QxdCarRent.boundary.view;
 
 import java.awt.EventQueue;
 
@@ -6,8 +6,8 @@ import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import com.ufc.br.app.util.CustomComponents.CustomPasswordField;
-import com.ufc.br.app.util.CustomComponents.CustomTextField;
+import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomPasswordField;
+import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomTextField;
 
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
@@ -53,7 +53,7 @@ public class SignUp extends JDialog {
 		contentPane.setLayout(null);
 		
 		JLabel labelSignUpScreenBackground = new JLabel("");
-		labelSignUpScreenBackground.setIcon(new ImageIcon(SignUp.class.getResource("/com/ufc/br/app/assets/images/sign_up_background.png")));
+		labelSignUpScreenBackground.setIcon(new ImageIcon(SignUp.class.getResource("/com/ufc/br/QxdCarRent/boundary/assets/images/sign_up_background.png")));
 		labelSignUpScreenBackground.setBounds(0, 0, 304, 242);
 		contentPane.add(labelSignUpScreenBackground);
 		
@@ -67,21 +67,21 @@ public class SignUp extends JDialog {
 		textFieldSignUpScreenName.setBounds(41, 0, 219, 20);
 		panelSignUpScreenBackground.add(textFieldSignUpScreenName);
 		textFieldSignUpScreenName.setColumns(10);
-		textFieldSignUpScreenName.setIcon(new ImageIcon(SignUp.class.getResource("/com/ufc/br/app/assets/icons/name.png")));
+		textFieldSignUpScreenName.setIcon(new ImageIcon(SignUp.class.getResource("/com/ufc/br/QxdCarRent/boundary/assets/icons/name.png")));
 		
 		CustomTextField textFieldSignUpScreenCPF = new CustomTextField();
 		textFieldSignUpScreenCPF.setBounds(41, 42, 219, 20);
 		panelSignUpScreenBackground.add(textFieldSignUpScreenCPF);
-		textFieldSignUpScreenCPF.setIcon(new ImageIcon(SignUp.class.getResource("/com/ufc/br/app/assets/icons/cpf.png")));
+		textFieldSignUpScreenCPF.setIcon(new ImageIcon(SignUp.class.getResource("/com/ufc/br/QxdCarRent/boundary/assets/icons/cpf.png")));
 		
 		CustomTextField textFieldSignUpScreenEmail = new CustomTextField();
 		textFieldSignUpScreenEmail.setBounds(41, 84, 219, 20);
 		panelSignUpScreenBackground.add(textFieldSignUpScreenEmail);
-		textFieldSignUpScreenEmail.setIcon(new ImageIcon(SignUp.class.getResource("/com/ufc/br/app/assets/icons/email.png")));
+		textFieldSignUpScreenEmail.setIcon(new ImageIcon(SignUp.class.getResource("/com/ufc/br/QxdCarRent/boundary/assets/icons/email.png")));
 		
 		CustomPasswordField passwordFieldSignUpScreenPassword = new CustomPasswordField();
 		passwordFieldSignUpScreenPassword.setBounds(41, 129, 219, 20);
-		passwordFieldSignUpScreenPassword.setIcon(new ImageIcon(SignUp.class.getResource("/com/ufc/br/app/assets/icons/password.png")));
+		passwordFieldSignUpScreenPassword.setIcon(new ImageIcon(SignUp.class.getResource("/com/ufc/br/QxdCarRent/boundary/assets/icons/password.png")));
 		panelSignUpScreenBackground.add(passwordFieldSignUpScreenPassword);
 		
 		JButton buttonSignUpScreenFinish = new JButton("Concluir");
