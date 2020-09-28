@@ -125,6 +125,7 @@ public class Main {
 		buttonMainScreenUser.setHorizontalTextPosition(SwingConstants.CENTER);
 		buttonMainScreenUser.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 			}
 		});
 		buttonMainScreenUser.setBounds(51, 190, 150, 150);
@@ -136,6 +137,12 @@ public class Main {
 		buttonMainScreenAdmin.setVerticalTextPosition(SwingConstants.BOTTOM);
 		buttonMainScreenAdmin.setHorizontalTextPosition(SwingConstants.CENTER);
 		buttonMainScreenAdmin.setBounds(253, 190, 150, 150);
+		buttonMainScreenAdmin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				SignInAdmin s = new SignInAdmin();
+				s.setVisible(true);
+			}
+		});
 		panelMainScreenSignIn.add(buttonMainScreenAdmin);
 		
 		JLabel labelMainScreenVersion = new JLabel(VERSION);
