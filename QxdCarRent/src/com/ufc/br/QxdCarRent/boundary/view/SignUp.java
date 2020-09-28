@@ -26,6 +26,7 @@ public class SignUp extends JDialog {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	private JPanel panelSignUpScreenBackground;
 
 	/**
 	 * Launch the application.
@@ -47,6 +48,16 @@ public class SignUp extends JDialog {
 	 * Create the dialog.
 	 */
 	public SignUp() {
+		initialize();
+	}
+	
+	private void initialize() {
+		createSignUpFrame();
+		loadBackground();
+		loadSignUpForm();
+	}
+	
+	private void createSignUpFrame() {
 		setTitle("Criar conta");
 		setResizable(false);
 		setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
@@ -56,18 +67,22 @@ public class SignUp extends JDialog {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+	}
+	
+	private void loadBackground() {
 		JLabel labelSignUpScreenBackground = new JLabel("");
 		labelSignUpScreenBackground.setIcon(new ImageIcon(SignUp.class.getResource("/com/ufc/br/QxdCarRent/boundary/assets/images/sign_up_background.png")));
 		labelSignUpScreenBackground.setBounds(0, 0, 304, 242);
 		contentPane.add(labelSignUpScreenBackground);
 		
-		JPanel panelSignUpScreenBackground = new JPanel();
+		panelSignUpScreenBackground = new JPanel();
 		panelSignUpScreenBackground.setBackground(new Color(240, 255, 240));
 		panelSignUpScreenBackground.setBounds(0, 242, 304, 255);
 		contentPane.add(panelSignUpScreenBackground);
 		panelSignUpScreenBackground.setLayout(null);
-		
+	}
+	
+	private void loadSignUpForm() {
 		CustomTextField textFieldSignUpScreenName = new CustomTextField();
 		textFieldSignUpScreenName.setBounds(41, 0, 219, 40);
 		textFieldSignUpScreenName.setBackground(new Color(240, 255, 240));
@@ -123,12 +138,10 @@ public class SignUp extends JDialog {
 		
 		JButton buttonSignUpScreenFinish = new JButton("Concluir");
 		buttonSignUpScreenFinish.setBounds(171, 215, 89, 23);
-		buttonSignUpScreenFinish.setBackground(new Color(255, 200, 0));
 		panelSignUpScreenBackground.add(buttonSignUpScreenFinish);
 		
 		JButton buttonSignUpScreenCancel = new JButton("Cancelar");
 		buttonSignUpScreenCancel.setBounds(41, 215, 89, 23);
-		buttonSignUpScreenCancel.setBackground(new Color(255, 200, 0));
 		panelSignUpScreenBackground.add(buttonSignUpScreenCancel);
 	}
 }
