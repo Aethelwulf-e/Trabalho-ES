@@ -125,7 +125,8 @@ public class Main {
 		buttonMainScreenUser.setHorizontalTextPosition(SwingConstants.CENTER);
 		buttonMainScreenUser.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				SignInUser s = new SignInUser();
+				s.setVisible(true);
 			}
 		});
 		buttonMainScreenUser.setBounds(51, 190, 150, 150);
