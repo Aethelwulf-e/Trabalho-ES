@@ -1,8 +1,6 @@
 package com.ufc.br.QxdCarRent.boundary.view;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
