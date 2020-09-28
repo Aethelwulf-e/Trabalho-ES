@@ -16,6 +16,10 @@ import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomTextField;
 
 public class SignInUser extends JDialog {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JPanel panelSignInUserScreenBackground;
 
