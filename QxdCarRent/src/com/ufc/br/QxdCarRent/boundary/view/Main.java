@@ -100,8 +100,8 @@ public class Main {
 		labelMainScreenSignUp.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				SignUp s = new SignUp();
-				s.setVisible(true);
+				SignUp signUp = new SignUp();
+				signUp.setVisible(true);
 			}
 		});
 	}
@@ -125,8 +125,8 @@ public class Main {
 		buttonMainScreenUser.setHorizontalTextPosition(SwingConstants.CENTER);
 		buttonMainScreenUser.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				SignInUser s = new SignInUser();
-				s.setVisible(true);
+				SignInUser signInUser = new SignInUser();
+				signInUser.setVisible(true);
 			}
 		});
 		buttonMainScreenUser.setBounds(51, 190, 150, 150);
@@ -140,8 +140,8 @@ public class Main {
 		buttonMainScreenAdmin.setBounds(253, 190, 150, 150);
 		buttonMainScreenAdmin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				SignInAdmin s = new SignInAdmin();
-				s.setVisible(true);
+				SignInAdmin signInAdmin = new SignInAdmin();
+				signInAdmin.setVisible(true);
 			}
 		});
 		panelMainScreenSignIn.add(buttonMainScreenAdmin);

@@ -1,6 +1,8 @@
 package com.ufc.br.QxdCarRent.boundary.view;
 
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -22,20 +24,9 @@ public class SignInAdmin extends JDialog {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JPanel panelSignInAdminScreenBackground;
+	private JButton buttonSignInAdminScreenFinish;
+	private JButton buttonSignInAdminScreenCancel;
 	
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		try {
-			SignInAdmin dialog = new SignInAdmin();
-			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-			dialog.setVisible(true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
 	/**
 	 * Create the dialog.
 	 */
@@ -98,12 +89,26 @@ public class SignInAdmin extends JDialog {
 		passwordFieldSignInAdminScreenPassword.setIcon(new ImageIcon(SignUp.class.getResource("/com/ufc/br/QxdCarRent/boundary/assets/icons/password.png")));
 		panelSignInAdminScreenBackground.add(passwordFieldSignInAdminScreenPassword);
 		
-		JButton buttonSignInAdminScreenFinish = new JButton("Concluir");
+		buttonSignInAdminScreenFinish = new JButton("Concluir");
 		buttonSignInAdminScreenFinish.setBounds(171, 125, 89, 23);
 		panelSignInAdminScreenBackground.add(buttonSignInAdminScreenFinish);
+		setFinishButtonAction();
 		
-		JButton buttonSignInAdminScreenCancel = new JButton("Cancelar");
+		buttonSignInAdminScreenCancel = new JButton("Cancelar");
 		buttonSignInAdminScreenCancel.setBounds(41, 125, 89, 23);
 		panelSignInAdminScreenBackground.add(buttonSignInAdminScreenCancel);
+		setCancelButtonAction();
+	}
+	
+	private void setFinishButtonAction() {
+		
+	}
+	
+	private void setCancelButtonAction() {
+		buttonSignInAdminScreenCancel.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
 	}
 }

@@ -1,6 +1,5 @@
 package com.ufc.br.QxdCarRent.boundary.view;
 
-import java.awt.EventQueue;
 import java.text.ParseException;
 
 import javax.swing.JDialog;
@@ -17,6 +16,9 @@ import javax.swing.JLabel;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 
 public class SignUp extends JDialog {
@@ -27,22 +29,8 @@ public class SignUp extends JDialog {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JPanel panelSignUpScreenBackground;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					SignUp dialog = new SignUp();
-					dialog.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	private JButton buttonSignUpScreenFinish;
+	private JButton buttonSignUpScreenCancel;
 
 	/**
 	 * Create the dialog.
@@ -136,12 +124,26 @@ public class SignUp extends JDialog {
 		passwordFieldSignUpScreenPassword.setIcon(new ImageIcon(SignUp.class.getResource("/com/ufc/br/QxdCarRent/boundary/assets/icons/password.png")));
 		panelSignUpScreenBackground.add(passwordFieldSignUpScreenPassword);
 		
-		JButton buttonSignUpScreenFinish = new JButton("Concluir");
+		buttonSignUpScreenFinish = new JButton("Concluir");
 		buttonSignUpScreenFinish.setBounds(171, 215, 89, 23);
 		panelSignUpScreenBackground.add(buttonSignUpScreenFinish);
+		setFinishButtonAction();
 		
-		JButton buttonSignUpScreenCancel = new JButton("Cancelar");
+		buttonSignUpScreenCancel = new JButton("Cancelar");
 		buttonSignUpScreenCancel.setBounds(41, 215, 89, 23);
 		panelSignUpScreenBackground.add(buttonSignUpScreenCancel);
+		setCancelButtonAction();
+	}
+	
+	private void setFinishButtonAction() {
+		
+	}
+	
+	private void setCancelButtonAction() {
+		buttonSignUpScreenCancel.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
 	}
 }

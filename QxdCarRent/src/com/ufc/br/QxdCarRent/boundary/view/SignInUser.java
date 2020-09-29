@@ -1,6 +1,8 @@
 package com.ufc.br.QxdCarRent.boundary.view;
 
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -22,19 +24,8 @@ public class SignInUser extends JDialog {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JPanel panelSignInUserScreenBackground;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		try {
-			SignInUser dialog = new SignInUser();
-			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-			dialog.setVisible(true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+	private JButton buttonSignInUserScreenFinish;
+	private JButton buttonSignInUserScreenCancel;
 
 	/**
 	 * Create the dialog.
@@ -82,7 +73,7 @@ public class SignInUser extends JDialog {
 	            BorderFactory.createTitledBorder(
 	                    BorderFactory.createEtchedBorder(
 	                            EtchedBorder.RAISED, Color.GRAY
-	                            , Color.DARK_GRAY), "Login User"));
+	                            , Color.DARK_GRAY), "E-mail"));
 		panelSignInUserScreenBackground.add(textFieldSignInUserScreenName);
 		textFieldSignInUserScreenName.setColumns(10);
 		textFieldSignInUserScreenName.setIcon(new ImageIcon(SignUp.class.getResource("/com/ufc/br/QxdCarRent/boundary/assets/icons/name.png")));
@@ -94,16 +85,30 @@ public class SignInUser extends JDialog {
 	            BorderFactory.createTitledBorder(
 	                    BorderFactory.createEtchedBorder(
 	                            EtchedBorder.RAISED, Color.GRAY
-	                            , Color.DARK_GRAY), "Senha User"));
+	                            , Color.DARK_GRAY), "Senha"));
 		passwordFieldSignInUserScreenPassword.setIcon(new ImageIcon(SignUp.class.getResource("/com/ufc/br/QxdCarRent/boundary/assets/icons/password.png")));
 		panelSignInUserScreenBackground.add(passwordFieldSignInUserScreenPassword);
 		
-		JButton buttonSignInUserScreenFinish = new JButton("Concluir");
+		buttonSignInUserScreenFinish = new JButton("Concluir");
 		buttonSignInUserScreenFinish.setBounds(171, 125, 89, 23);
 		panelSignInUserScreenBackground.add(buttonSignInUserScreenFinish);
+		setFinishButtonAction();
 		
-		JButton buttonSignInUserScreenCancel = new JButton("Cancelar");
+		buttonSignInUserScreenCancel = new JButton("Cancelar");
 		buttonSignInUserScreenCancel.setBounds(41, 125, 89, 23);
 		panelSignInUserScreenBackground.add(buttonSignInUserScreenCancel);
+		setCancelButtonAction();
+	}
+	
+	private void setFinishButtonAction() {
+		
+	}
+	
+	private void setCancelButtonAction() {
+		buttonSignInUserScreenCancel.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
 	}
 }
