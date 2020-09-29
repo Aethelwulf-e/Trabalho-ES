@@ -13,8 +13,10 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.EtchedBorder;
 
+import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomAlertDialog;
 import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomPasswordField;
 import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomTextField;
+import com.ufc.br.QxdCarRent.control.AdminController;
 
 public class SignInAdmin extends JDialog {
 
@@ -26,11 +28,15 @@ public class SignInAdmin extends JDialog {
 	private JPanel panelSignInAdminScreenBackground;
 	private JButton buttonSignInAdminScreenFinish;
 	private JButton buttonSignInAdminScreenCancel;
+	private CustomTextField textFieldSignInAdminScreenName;
+	private CustomPasswordField passwordFieldSignInAdminScreenPassword;
+	private AdminController adminController;
 	
 	/**
 	 * Create the dialog.
 	 */
 	public SignInAdmin() {
+		adminController = new AdminController();
 		initialize();
 	}
 	
@@ -66,7 +72,7 @@ public class SignInAdmin extends JDialog {
 	}
 	
 	private void loadForm() {
-		CustomTextField textFieldSignInAdminScreenName = new CustomTextField();
+		textFieldSignInAdminScreenName = new CustomTextField();
 		textFieldSignInAdminScreenName.setBounds(41, 0, 219, 40);
 		textFieldSignInAdminScreenName.setBackground(new Color(240, 255, 240));
 		textFieldSignInAdminScreenName.setBorder(
@@ -78,7 +84,7 @@ public class SignInAdmin extends JDialog {
 		textFieldSignInAdminScreenName.setColumns(10);
 		textFieldSignInAdminScreenName.setIcon(new ImageIcon(SignUp.class.getResource("/com/ufc/br/QxdCarRent/boundary/assets/icons/name.png")));
 		
-		CustomPasswordField passwordFieldSignInAdminScreenPassword = new CustomPasswordField();
+		passwordFieldSignInAdminScreenPassword = new CustomPasswordField();
 		passwordFieldSignInAdminScreenPassword.setBounds(41, 51, 219, 40);
 		passwordFieldSignInAdminScreenPassword.setBackground(new Color(240, 255, 240));
 		passwordFieldSignInAdminScreenPassword.setBorder(
@@ -101,7 +107,19 @@ public class SignInAdmin extends JDialog {
 	}
 	
 	private void setFinishButtonAction() {
-		
+		buttonSignInAdminScreenFinish.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String login = textFieldSignInAdminScreenName.getText();
+				String password = passwordFieldSignInAdminScreenPassword.getText();
+				
+				if(login.equals("") || password.equals("")) {
+					CustomAlertDialog alertDialog = new CustomAlertDialog();
+					alertDialog.setVisible(true);
+				} else {
+					// TODO: AUTH
+				}
+			}
+		});
 	}
 	
 	private void setCancelButtonAction() {
