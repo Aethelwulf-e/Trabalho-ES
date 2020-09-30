@@ -13,7 +13,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.EtchedBorder;
 
-import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomAlerts.CustomAlertDialog;
+import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomAlerts.CustomErrorAlertDialog;
+import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomAlerts.CustomWarningAlertDialog;
 import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomInputs.CustomPasswordField;
 import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomInputs.CustomTextField;
 import com.ufc.br.QxdCarRent.control.AdminController;
@@ -113,10 +114,17 @@ public class SignInAdmin extends JDialog {
 				String password = passwordFieldSignInAdminScreenPassword.getText();
 				
 				if(login.equals("") || password.equals("")) {
-					CustomAlertDialog alertDialog = new CustomAlertDialog();
+					CustomWarningAlertDialog alertDialog = new CustomWarningAlertDialog();
 					alertDialog.setVisible(true);
 				} else {
 					boolean auth = adminController.validateAuth(login, password);
+					
+					if(auth) {
+						// TODO: ENVIAR PARA PAINEL ADMIN
+					} else {
+						CustomErrorAlertDialog errorDialog = new CustomErrorAlertDialog();
+						errorDialog.setVisible(true);
+					}
 				}
 			}
 		});
