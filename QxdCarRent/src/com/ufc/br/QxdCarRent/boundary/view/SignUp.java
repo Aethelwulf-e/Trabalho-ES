@@ -8,9 +8,9 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.EtchedBorder;
 import javax.swing.text.MaskFormatter;
 
-import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomFormattedTextField;
-import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomPasswordField;
-import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomTextField;
+import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomInputs.CustomFormattedTextField;
+import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomInputs.CustomPasswordField;
+import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomInputs.CustomTextField;
 
 import javax.swing.JLabel;
 import javax.swing.BorderFactory;

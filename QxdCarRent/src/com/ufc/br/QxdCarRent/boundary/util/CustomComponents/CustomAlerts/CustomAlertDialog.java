@@ -1,4 +1,4 @@
-package com.ufc.br.QxdCarRent.boundary.util.CustomComponents;
+package com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomAlerts;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;

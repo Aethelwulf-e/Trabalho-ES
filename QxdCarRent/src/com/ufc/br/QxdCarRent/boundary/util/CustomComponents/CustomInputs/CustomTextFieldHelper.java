@@ -1,4 +1,4 @@
-package com.ufc.br.QxdCarRent.boundary.util.CustomComponents;
+package com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomInputs;
 
 import java.awt.Graphics;
 import java.awt.Insets;

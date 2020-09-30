@@ -13,8 +13,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.EtchedBorder;
 
-import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomPasswordField;
-import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomTextField;
+import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomInputs.CustomPasswordField;
+import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomInputs.CustomTextField;
 
 public class SignInUser extends JDialog {
 

@@ -13,9 +13,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.EtchedBorder;
 
-import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomAlertDialog;
-import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomPasswordField;
-import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomTextField;
+import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomAlerts.CustomAlertDialog;
+import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomInputs.CustomPasswordField;
+import com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomInputs.CustomTextField;
 import com.ufc.br.QxdCarRent.control.AdminController;
 
 public class SignInAdmin extends JDialog {
@@ -116,7 +116,7 @@ public class SignInAdmin extends JDialog {
 					CustomAlertDialog alertDialog = new CustomAlertDialog();
 					alertDialog.setVisible(true);
 				} else {
-					// TODO: AUTH
+					boolean auth = adminController.validateAuth(login, password);
 				}
 			}
 		});

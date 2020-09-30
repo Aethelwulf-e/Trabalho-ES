@@ -1,24 +1,22 @@
-package com.ufc.br.QxdCarRent.boundary.util.CustomComponents;
+package com.ufc.br.QxdCarRent.boundary.util.CustomComponents.CustomInputs;
 
 import java.awt.Graphics;
 
 import javax.swing.Icon;
-import javax.swing.JTextField;
+import javax.swing.JFormattedTextField;
+import javax.swing.text.MaskFormatter;
 import javax.swing.border.Border;
 
-public class CustomTextField extends JTextField {
-	/**
-	 * 
-	 */
+public class CustomFormattedTextField extends JFormattedTextField{
 	private static final long serialVersionUID = 1L;
 	private CustomTextFieldHelper mHelper = new CustomTextFieldHelper(this);
 
-	public CustomTextField() {
+	public CustomFormattedTextField() {
 		super();
 	}
 
-	public CustomTextField(int cols) {
-		super(cols);
+	public CustomFormattedTextField(MaskFormatter mask) {
+		super(mask);
 	}
 
 	private CustomTextFieldHelper getHelper() {
